@@ -65,7 +65,6 @@ class Graph{
     }
     void bfs(T src,unordered_map<int,bool>&vis){
         queue<T>q;
-        
         q.push(src);
         vis[src]=true;
         while (!q.empty())
@@ -79,8 +78,7 @@ class Graph{
                     vis[i]=true;
                 }
             }
-        }
-        
+        } 
     }
     void dfs(T src,unordered_map<int,bool>&vis){
         cout<<src<<",";
@@ -90,7 +88,6 @@ class Graph{
                 dfs(i,vis);
             }
         }
-        
     }
 };
 int main(){
@@ -107,19 +104,19 @@ int main(){
     cout<<endl;
     // g.bfs(0);
     unordered_map<int,bool>vis;
-    // cout<<"Printing BFS:";
-    // for(int i=0;i<=4;i++){
-    //     if(!vis[i]){
-    //         g.bfs(i,vis);
-    //     }
-    // }
-
-    cout<<"Printing DFS:";
+    cout<<"Printing BFS:";
     for(int i=0;i<=4;i++){
         if(!vis[i]){
-            g.dfs(i,vis);
+            g.bfs(i,vis);
         }
     }
+
+    // cout<<"Printing DFS:";
+    // for(int i=0;i<=4;i++){
+    //     if(!vis[i]){
+    //         g.dfs(i,vis);
+    //     }
+    // }
 
 }
 

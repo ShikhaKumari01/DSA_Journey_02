@@ -20,6 +20,9 @@
         "unordered_map": "cpp",
         "xiosbase": "cpp",
         "memory": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "list": "cpp",
+        "xhash": "cpp",
+        "xtree": "cpp"
     }
 }
